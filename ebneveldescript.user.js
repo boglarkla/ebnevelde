@@ -58,9 +58,9 @@
                     }
                     else{
                         // check if the 3rd disabled button is for bath
-                        if(button.innerHTML != "Fürdetés"){
-                            document.getElementsByClassName("big_button")[5].click();
-                        }
+                        //if(button.innerHTML != "Fürdetés"){
+                        //   document.getElementsByClassName("big_button")[5].click();
+                        //}
                         document.getElementsByClassName("big_button")[6].click();
                     }
                 }
