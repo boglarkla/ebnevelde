@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EbneveldeScript
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  Segít automatikusan ellátni a kutyákat ebneveldén, mivel baromi uncsi végig kattintgatni mindent. :)
 // @author       boglarkla
 // @match        *://www.ebnevelde.hu/dogs/zoom/?id=*
@@ -58,10 +58,12 @@
                     }
                     else{
                         // check if the 3rd disabled button is for bath
-                        //if(button.innerHTML != "Fürdetés"){
-                        //   document.getElementsByClassName("big_button")[5].click();
-                        //}
+                        if(button.innerHTML != "Fürdetés"){
+                           document.getElementsByClassName("big_button")[5].click();
+                        }
+                        else{
                         document.getElementsByClassName("big_button")[6].click();
+                        }
                     }
                 }
             }
