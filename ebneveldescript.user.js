@@ -2,7 +2,6 @@
 // @name         EbneveldeScript
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @downloadURL  https://gist.github.com/boglarkla/c9557fde77a02b504b460bc89e2345b9
 // @description  Segít automatikusan ellátni a kutyákat ebneveldén, mivel baromi uncsi végig kattintgatni mindent. :)
 // @author       boglarkla
 // @match        *://www.ebnevelde.hu/dogs/zoom/?id=*
