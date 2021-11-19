@@ -15,24 +15,35 @@
     'use strict';
     let url = window.location.href;
 
+    // we are on the main page    
     if(!url.includes("&")){
-
+        // if food is not full
         if(document.body.innerHTML.search("10 napra elég") == -1)
         {
+            // click on feed button
            document.getElementsByClassName("big_button")[1].click();
         }
 
+        // load the 0th disabled button's text
         var button = document.getElementsByClassName("big_disabled")[0];
+        // if said button does not exist
         if(button === undefined){
-         document.getElementsByClassName("big_button")[2].click();
+            // click on teach button
+            document.getElementsByClassName("big_button")[2].click();
         }
+        // there is indeed a disabled button
         else{
+            let i = 0;
+            if(button.innerHTML == "Előző"){
+                i = 1;
+            }
+            
             // check if the 0th disabled button is for teaching
             if(button.innerHTML != "Tanítás"){
                document.getElementsByClassName("big_button")[2].click();
             }
 
-            button = document.getElementsByClassName("big_disabled")[1];
+            button = document.getElementsByClassName("big_disabled")[1+i];
             if(button === undefined){
                 document.getElementsByClassName("big_button")[3].click();
             }
@@ -42,7 +53,7 @@
                     document.getElementsByClassName("big_button")[3].click();
                 }
 
-                button = document.getElementsByClassName("big_disabled")[2];
+                button = document.getElementsByClassName("big_disabled")[2+i];
                 if(button === undefined){
                     document.getElementsByClassName("big_button")[4].click();
                 }
@@ -52,7 +63,7 @@
                         document.getElementsByClassName("big_button")[4].click();
                     }
 
-                    button = document.getElementsByClassName("big_disabled")[3];
+                    button = document.getElementsByClassName("big_disabled")[3+i];
                     if(button === undefined){
                         document.getElementsByClassName("big_button")[5].click();
                     }
@@ -60,7 +71,7 @@
                         // check if the 3rd disabled button is for bath
                         if(button.innerHTML != "Fürdetés"){
                            document.getElementsByClassName("big_button")[5].click();
-                        }
+                        }                       
                         else{
                         document.getElementsByClassName("big_button")[6].click();
                         }
