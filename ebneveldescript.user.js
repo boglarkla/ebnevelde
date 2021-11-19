@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EbneveldeScript
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Segít automatikusan ellátni a kutyákat ebneveldén, mivel baromi uncsi végig kattintgatni mindent. :)
 // @author       boglarkla
 // @match        *://www.ebnevelde.hu/dogs/zoom/?id=*
