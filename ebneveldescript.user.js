@@ -78,6 +78,7 @@
                     }
                 }
             }
+            document.getElementsByClassName("big_button")[5].click();
         }
     }
     else if(url.includes("&etel")){
