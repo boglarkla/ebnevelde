@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         EbneveldeScript
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.3
 // @description  Segít automatikusan ellátni a kutyákat ebneveldén, mivel baromi uncsi végig kattintgatni mindent. :)
 // @author       boglarkla
 // @match        *://www.ebnevelde.hu/dogs/zoom/?id=*
@@ -73,15 +73,27 @@
                            document.getElementsByClassName("big_button")[5].click();
                         }                       
                         else{
-                        document.getElementsByClassName("big_button")[6].click();
+                            document.getElementsByClassName("big_button")[6].click();
                         }
                     }
                 }
             }
         }
     }
-
-    if(url.includes("&etel")){
+    else if(url.includes("&etel")){
+         document.getElementsByClassName("button")[0].click();     
+    }
+    else if(url.includes("&tanit")){
+        document.getElementsByClassName("button")[0].click();
+    }
+    else if(url.includes("&jatek")){
+        document.getElementsByClassName("button")[0].click();
+    }
+    else if(url.includes("&furdet")){
+        document.getElementsByClassName("button")[0].click();
+    }  
+        
+    /* if(url.includes("&etel")){
         document.getElementsByClassName("button")[0].click();
     }
 
@@ -96,6 +108,7 @@
     if(url.includes("&furdet")){
         document.getElementsByClassName("button")[0].click();
     }
+    */
 }
 )();
 
